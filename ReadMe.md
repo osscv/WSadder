@@ -1,6 +1,4 @@
-<img width="1672" height="941" alt="WSadder" src="https://github.com/user-attachments/assets/2ec5d5ec-4b5c-4a97-a56c-973c9f6d2c39" />
-
-# WSadder - WhatsApp Group Adder
+# [WSadder - WhatsApp Group Adder](https://www.dkly.net/projects/6)
 
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![npm](https://img.shields.io/badge/npm-install-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
@@ -10,9 +8,11 @@
 
 Project by Lay Yang (DKLY) - [www.dkly.net](https://www.dkly.net)
 
+Project showcase: [www.dkly.net/projects/6](https://www.dkly.net/projects/6)
+
 Repository: [github.com/osscv/WSadder](https://github.com/osscv/WSadder)
 
-WSadder is a WhatsApp automation tool designed to simplify participant onboarding for event organizers, teams, communities, and individuals. It enables bulk adding of contacts from Excel directly into WhatsApp groups, reducing the need to manually add participants one by one.
+[WSadder](https://www.dkly.net/projects/6) is a WhatsApp automation tool designed to simplify participant onboarding for event organizers, teams, communities, and individuals. It enables bulk adding of contacts from Excel directly into WhatsApp groups, reducing the need to manually add participants one by one.
 
 Users can prepare a spreadsheet containing participant names and phone numbers, select a target WhatsApp group through WhatsApp Web, and let WSadder process the list efficiently. This helps reduce time, minimize human error, and keep group onboarding consistent when managing larger participant lists.
 
