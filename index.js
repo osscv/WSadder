@@ -54,6 +54,22 @@ const COUNTRY_CALLING_CODES = {
   vn: '84',
 };
 
+function printBanner() {
+  console.log(`
+============================================================
+ __        ______   ____            _     _
+ \\ \\      / / ___| / ___|  __ _  __| | __| | ___ _ __
+  \\ \\ /\\ / /\\___ \\| |  _  / _\` |/ _\` |/ _\` |/ _ \\ '__|
+   \\ V  V /  ___) | |_| | (_| | (_| | (_| |  __/ |
+    \\_/\\_/  |____/ \\____|\\__,_|\\__,_|\\__,_|\\___|_|
+
+              WSadder - by Lay Yang
+                 www.dkly.net
+        https://github.com/osscv/WSadder
+============================================================
+`);
+}
+
 async function pickFromList(label, items, suggestIdx, formatter = (x) => x) {
   console.log(`\n${label}:`);
   items.forEach((it, i) => console.log(`  ${String(i + 1).padStart(2)}. ${formatter(it)}`));
@@ -1110,6 +1126,8 @@ client.on('ready', async () => {
 // ---------- entry point ----------
 
 async function main() {
+  printBanner();
+
   if (SETUP_ONLY) {
     await runSetup();
     console.log('\nNow logging in to WhatsApp to pick the target group...');

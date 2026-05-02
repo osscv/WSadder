@@ -8,6 +8,8 @@
 
 Project by Lay Yang (DKLY) - [www.dkly.net](https://www.dkly.net)
 
+Repository: [github.com/osscv/WSadder](https://github.com/osscv/WSadder)
+
 A Node.js tool for adding contacts from an Excel spreadsheet to a WhatsApp group using WhatsApp Web.
 
 The script reads participant names and phone numbers from the first sheet of an `.xlsx` file, logs in through WhatsApp Web, lets you choose a target group, then tries to add each contact. If a contact cannot be added directly, WSadder can automatically fall back to sending that person a direct message with the group invitation link.
