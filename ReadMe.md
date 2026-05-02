@@ -6,7 +6,7 @@
 [![WhatsApp Web](https://img.shields.io/badge/WhatsApp%20Web-unofficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://web.whatsapp.com/)
 [![Responsible Use](https://img.shields.io/badge/Use-responsibly-blue?style=for-the-badge)](#responsible-use)
 
-Project by DKLY - [www.dkly.net](https://www.dkly.net)
+Project by Lay Yang (DKLY) - [www.dkly.net](https://www.dkly.net)
 
 A Node.js tool for adding contacts from an Excel spreadsheet to a WhatsApp group using WhatsApp Web.
 
