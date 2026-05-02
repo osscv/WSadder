@@ -6,7 +6,7 @@
 [![WhatsApp Web](https://img.shields.io/badge/WhatsApp%20Web-unofficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://web.whatsapp.com/)
 [![Responsible Use](https://img.shields.io/badge/Use-responsibly-blue?style=for-the-badge)](#responsible-use)
 
-Project by [Lay Yang (DKLY)](https://www.dkly.net) - [www.dkly.net](https://www.dkly.net)
+Project by Lay Yang (DKLY) - [www.dkly.net](https://www.dkly.net)
 
 A Node.js tool for adding contacts from an Excel spreadsheet to a WhatsApp group using WhatsApp Web.
 
@@ -75,6 +75,29 @@ The author is not responsible for bans, account restrictions, data loss, legal i
 - A WhatsApp account that can access the target group
 - Admin permission in the target WhatsApp group is recommended, especially for adding participants and fetching invite links
 - An Excel `.xlsx` file with a header row containing participant names and WhatsApp phone numbers
+
+Check your installed Node.js and npm versions:
+
+```bash
+node -v
+npm -v
+```
+
+Install Node.js:
+
+| Platform | Recommended install method |
+| --- | --- |
+| Windows | Download the LTS installer from [nodejs.org](https://nodejs.org/) and run it |
+| Ubuntu/Debian | Use NodeSource or your package manager, then install Node.js 18+ |
+| macOS | Download from [nodejs.org](https://nodejs.org/) or install with Homebrew using `brew install node` |
+| Other Linux | Use your distribution package manager, NodeSource, `nvm`, or another trusted Node.js installer |
+
+Ubuntu/Debian example using NodeSource:
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
 
 ## Install
 
