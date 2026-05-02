@@ -1,0 +1,13 @@
+{
+  "excelFile": "sample-participants.xlsx",
+  "phoneColumn": "Phone Number (WhatsApp Avalible)",
+  "nameColumn": "Full name as per IC/Passport",
+  "defaultCountryCode": "60",
+  "groupName": "",
+  "groupId": "",
+  "eventName": "Sample Event",
+  "eventDate": "1 January 2026",
+  "inviteMessage": "Hi {name},\n\nYou're confirmed for the {eventName} on {eventDate}. Please join the WhatsApp group using the link below for updates and important information:\n{link}\n\nSee you there!",
+  "delayMsBetweenAdds": 1500,
+  "dryRun": true
+}
