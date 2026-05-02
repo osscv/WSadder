@@ -1,5 +1,11 @@
 # WSadder - WhatsApp Group Adder
 
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![npm](https://img.shields.io/badge/npm-install-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
+[![Excel](https://img.shields.io/badge/Excel-.xlsx-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](https://www.npmjs.com/package/xlsx)
+[![WhatsApp Web](https://img.shields.io/badge/WhatsApp%20Web-unofficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://web.whatsapp.com/)
+[![Responsible Use](https://img.shields.io/badge/Use-responsibly-blue?style=for-the-badge)](#responsible-use)
+
 Project by DKLY - [www.dkly.net](https://www.dkly.net)
 
 A Node.js tool for adding contacts from an Excel spreadsheet to a WhatsApp group using WhatsApp Web.
@@ -9,6 +15,28 @@ The script reads participant names and phone numbers from the first sheet of an 
 WSadder is useful for event organizers, workshop teams, community managers, class coordinators, and volunteer teams that need to add a large group of confirmed participants, attendees, or joiners into the relevant WhatsApp group without adding each person one by one.
 
 This repository includes `sample-participants.xlsx` with fake participant data. Replace it with your own Excel file before running against real contacts.
+
+## Features
+
+- Import participant names and phone numbers from an Excel `.xlsx` file
+- Select the target WhatsApp group through an interactive setup flow
+- Add participants directly to the selected group when WhatsApp allows it
+- Automatically send a fallback DM with the group invite link when direct adding fails
+- Customize the fallback DM message in `config.json`
+- Normalize phone numbers from multiple countries and formats
+- Update the Excel file with a `WhatsApp Add Status` column
+- Write a detailed run summary to `add_log.json`
+- Use `dryRun` mode to test before sending real messages
+
+## How It Works
+
+1. Prepare an Excel file with participant names and WhatsApp phone numbers.
+2. Run the setup wizard and select the Excel columns.
+3. Scan the WhatsApp Web QR code.
+4. Select the target WhatsApp group.
+5. WSadder processes each participant.
+6. If direct adding fails, WSadder can DM the participant with the group invite link.
+7. The Excel file is updated with each participant's result.
 
 ## Use Cases
 
@@ -88,6 +116,17 @@ npm run setup
 The setup saves your choices in `config.json`.
 
 By default, `config.json` has `"dryRun": true` so the sample project does not add or message anyone accidentally. Set it to `false` only when your real Excel file, WhatsApp group, and message are ready.
+
+## Safety Checklist
+
+Before running with real contacts:
+
+- Confirm that participants agreed to be contacted or added to the group
+- Run setup and verify the selected WhatsApp group
+- Review `config.json`, especially `inviteMessage`, `eventName`, and `eventDate`
+- Keep `"dryRun": true` for testing
+- Set `"dryRun": false` only when you are ready for real adding or messaging
+- Start with a small test list before processing a large Excel file
 
 ## Usage
 
@@ -188,6 +227,17 @@ The script also writes a run summary to:
 ```text
 add_log.json
 ```
+
+## Troubleshooting
+
+| Issue | What to check |
+| --- | --- |
+| QR code does not work | Make sure WhatsApp Web is reachable and scan with the correct WhatsApp account |
+| Group is not listed | Wait for WhatsApp Web sync, then run `npm run list-groups` again |
+| Invite link cannot be fetched | Make sure your WhatsApp account has permission to access or generate the group invite link |
+| Participants are skipped | Check the selected phone column and phone number format |
+| Messages are not sent | Confirm `dryRun` is `false` and the recipient is registered on WhatsApp |
+| Too many failures or limits | Stop the run and review WhatsApp account limits, consent, and message frequency |
 
 ## Git Notes
 
