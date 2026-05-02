@@ -10,25 +10,26 @@ Project by Lay Yang (DKLY) - [www.dkly.net](https://www.dkly.net)
 
 Repository: [github.com/osscv/WSadder](https://github.com/osscv/WSadder)
 
-A Node.js tool for adding contacts from an Excel spreadsheet to a WhatsApp group using WhatsApp Web.
+WSadder is a WhatsApp automation tool designed to simplify participant onboarding for event organizers, teams, communities, and individuals. It enables bulk adding of contacts from Excel directly into WhatsApp groups, reducing the need to manually add participants one by one.
 
-The script reads participant names and phone numbers from the first sheet of an `.xlsx` file, logs in through WhatsApp Web, lets you choose a target group, then tries to add each contact. If a contact cannot be added directly, WSadder can automatically fall back to sending that person a direct message with the group invitation link.
+Users can prepare a spreadsheet containing participant names and phone numbers, select a target WhatsApp group through WhatsApp Web, and let WSadder process the list efficiently. This helps reduce time, minimize human error, and keep group onboarding consistent when managing larger participant lists.
 
-WSadder is useful for event organizers, workshop teams, community managers, class coordinators, and volunteer teams that need to add a large group of confirmed participants, attendees, or joiners into the relevant WhatsApp group without adding each person one by one.
+The tool also includes a smart fallback mechanism: if a participant cannot be added directly because of privacy settings, permissions, or restrictions, WSadder can automatically send a personalized direct message with the group invitation link. Meanwhile, the Excel file is updated with detailed status results such as added, invited, skipped, or failed, making tracking and follow-up easier.
+
+WSadder is especially useful for workshops, training sessions, classes, volunteer programs, community events, and other organized activities where many confirmed participants need to be added to the correct WhatsApp group quickly and reliably.
 
 This repository includes `sample-participants.xlsx` with fake participant data. Replace it with your own Excel file before running against real contacts.
 
 ## Features
 
-- Import participant names and phone numbers from an Excel `.xlsx` file
-- Select the target WhatsApp group through an interactive setup flow
-- Add participants directly to the selected group when WhatsApp allows it
-- Automatically send a fallback DM with the group invite link when direct adding fails
-- Customize the fallback DM message in `config.json`
-- Normalize phone numbers from multiple countries and formats
-- Update the Excel file with a `WhatsApp Add Status` column
-- Write a detailed run summary to `add_log.json`
-- Use `dryRun` mode to test before sending real messages
+- Bulk adding from Excel to WhatsApp groups
+- Automated fallback invites via direct message
+- Customizable invitation messages in `config.json`
+- International phone number normalization
+- Dry-run testing before real execution
+- Status tracking with Excel updates
+- Detailed run summary in `add_log.json`
+- Built-in safeguards for responsible and consent-based use
 
 ## How It Works
 
@@ -42,7 +43,7 @@ This repository includes `sample-participants.xlsx` with fake participant data. 
 
 ## Use Cases
 
-WSadder is designed for legitimate group onboarding workflows where participants have already registered, confirmed, or agreed to join a WhatsApp group. It helps reduce repetitive manual work when managing large participant lists.
+WSadder is designed for legitimate group onboarding workflows where participants have already registered, confirmed, or agreed to join a WhatsApp group. It works as a bulk automation tool that helps reduce repetitive manual work when moving large Excel participant lists into WhatsApp groups.
 
 Common use cases include:
 
