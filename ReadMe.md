@@ -1,3 +1,5 @@
+<img width="1672" height="941" alt="WSadder" src="https://github.com/user-attachments/assets/2ec5d5ec-4b5c-4a97-a56c-973c9f6d2c39" />
+
 # WSadder - WhatsApp Group Adder
 
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
